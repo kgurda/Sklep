@@ -10,7 +10,7 @@ class Quantity{
         $this->value = $value;
     }
     
-    public function getQuantity(){
+    public function getValue(){
         return $this->value;
     }
 }

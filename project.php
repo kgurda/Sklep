@@ -37,3 +37,5 @@ $cart = new Cart($customer1);
 
 //Pobranie klienta z koszyka i wyświetlenie jego imienia
 echo $cart->getCustomer()->getFirstName() . '<br>';
+
+echo $cart->getTotalSum();

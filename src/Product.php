@@ -1,12 +1,13 @@
 <?php
 
 class Product{
-    private $id;
-    private $price;
-    private $name;
-    private $quantity;
+    protected $id;
+    protected $price;
+    protected $name;
+    protected $quantity;
     
-    public function __construct($id, ProductPrice $price, $name, Quantity $quantity) { //price najpierw sprawdzi w klasie ProductPrice
+    public function __construct(ProductPrice $price, $name, Quantity $quantity) { //price najpierw sprawdzi w klasie ProductPrice
+        $this->id = null;
         $this->price = $price;
         $this->name = $name;
         $this->quantity = $quantity;
@@ -20,6 +21,9 @@ class Product{
      */
     public function getPrice(){
         return $this->price;
+    }
+    public function setPrice(ProductPrice $price){
+        $this->price = $price;
     }
     public function getName(){
         return $this->name;
